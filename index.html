@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Vistoria Técnica</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Relatório de Vistoria Técnica</h1>
+    <form id="form-vistoria">
+      <label>Data:
+        <input type="date" id="data">
+      </label>
+      <label>Responsável:
+        <input type="text" id="responsavel" placeholder="Nome completo">
+      </label>
+      <label>Local da Vistoria:
+        <input type="text" id="local">
+      </label>
+      <label>Descrição da Vistoria:
+        <textarea id="descricao" rows="4"></textarea>
+      </label>
+      <label>Observações:
+        <textarea id="observacoes" rows="3"></textarea>
+      </label>
+      <button type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
+      <button type="button" onclick="exportarPDF()">Exportar em PDF</button>
+    </form>
+
+    <div id="relatorio-gerado">
+      <!-- Relatório gerado aqui -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
